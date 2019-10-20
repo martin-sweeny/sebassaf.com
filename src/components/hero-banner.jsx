@@ -2,9 +2,9 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import Color from 'color'
 
 import { dark, secondary, primary, white } from '../utils/colours'
+import CTAButton from './cta'
 
 const styles = {
 	HeroBanner: styled.section`
@@ -54,34 +54,6 @@ const styles = {
 		width: 100%;
 		z-index: -1;
 	`,
-	CTA: styled.a`
-		background: ${Color(primary)
-			.saturate(50)
-			.lighten(1.5)
-			.toString()};
-		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15),
-			0 1px 3px rgba(0, 0, 0, 0.15);
-		color: ${white};
-		cursor: pointer;
-		display: inline-block;
-		font-size: 24px;
-		font-weight: 700;
-		height: 64px;
-		line-height: 64px;
-		text-align: center;
-		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-		width: 311px;
-
-		&:hover,
-		&:focus {
-			background: ${Color(primary)
-				.saturate(100)
-				.lighten(1.75)
-				.toString()};
-			box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15),
-				0 1px 2px rgba(0, 0, 0, 0.5);
-		}
-	`,
 }
 
 export default () => (
@@ -114,6 +86,6 @@ export default () => (
 			velit imperdiet posuere. Praesent diam massa, scelerisque vel posuere non,
 			vulputate accumsan urna.
 		</p>
-		<styles.CTA>Get in Touch</styles.CTA>
+		<CTAButton>Get in Touch</CTAButton>
 	</styles.HeroBanner>
 )
