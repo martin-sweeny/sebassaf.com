@@ -15,6 +15,10 @@ const styles = {
 		width: 100%;
 		z-index: 10;
 
+		ul {
+			margin: 0;
+		}
+
 		li {
 			list-style: none;
 		}
