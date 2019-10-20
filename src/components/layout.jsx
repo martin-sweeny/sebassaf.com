@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { StaticQuery, graphql } from 'gatsby'
 import { Global, css } from '@emotion/core'
 
+import Header from './header'
 import { white, primary } from '../utils/colours'
 
 const fontStack = `montserrat, sans-serif`
@@ -45,6 +46,7 @@ const Layout = ({ children }) => (
 			<>
 				<GlobalStyle />
 
+				<Header />
 				<Content>
 					<div>{children}</div>
 				</Content>

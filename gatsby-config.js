@@ -7,7 +7,7 @@ module.exports = {
 	plugins: [
 		`gatsby-plugin-offline`,
 		`gatsby-plugin-emotion`,
-		`gatsby-plugin-react-helmet`,
+		+`gatsby-plugin-react-helmet`,
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		{
@@ -32,7 +32,7 @@ module.exports = {
 				background_color: `#fff`,
 				theme_color: `#4B5F32`,
 				display: `minimal-ui`,
-				icon: ``,
+				icon: `src/images/favicon.svg`,
 			},
 		},
 	],

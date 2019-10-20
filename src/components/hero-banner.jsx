@@ -4,7 +4,7 @@ import { StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import Color from 'color'
 
-import { primary, secondary, accent, white } from '../utils/colours'
+import { dark, secondary, primary, white } from '../utils/colours'
 
 const styles = {
 	HeroBanner: styled.section`
@@ -18,7 +18,7 @@ const styles = {
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 		h1 {
-			color: ${primary};
+			color: ${dark};
 			margin-bottom: 6vh;
 			position: relative;
 			text-align: center;
@@ -53,7 +53,7 @@ const styles = {
 		z-index: -1;
 	`,
 	CTA: styled.a`
-		background: ${Color(accent)
+		background: ${Color(primary)
 			.saturate(50)
 			.lighten(1.5)
 			.toString()};
@@ -72,7 +72,7 @@ const styles = {
 
 		&:hover,
 		&:focus {
-			background: ${Color(accent)
+			background: ${Color(primary)
 				.saturate(100)
 				.lighten(1.75)
 				.toString()};
