@@ -19,7 +19,7 @@ const typography = new Typography({
 		},
 		h3: {
 			...adjustFontSizeTo('36px'),
-			fontWeight: 200,
+			fontWeight: 300,
 		},
 		p: {
 			lineHeight: rhythm(1.2),
