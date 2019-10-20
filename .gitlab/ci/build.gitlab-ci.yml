@@ -1,0 +1,9 @@
+build site:
+  stage: build
+  script:
+    - yarn --progress=false
+    - yarn build
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - public

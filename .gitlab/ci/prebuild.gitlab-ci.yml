@@ -1,0 +1,11 @@
+lint:
+  extends: .profile
+  stage: prebuild
+  script:
+    - yarn --progress=false
+    - yarn lint:report || true
+  artifacts:
+    name: eslint-report
+    expire_in: 1 week
+    paths:
+      - eslint-report.html

@@ -1,0 +1,26 @@
+deploy:qa:
+  extends: .set_up_ssh_qa
+  stage: deploy
+  environment:
+    name: QA
+    url: $SERVER_HOST_QA
+  only:
+    - develop
+    - /^release\/.+/
+  script:
+    - apt-get update
+    - apt-get install rsync -y
+    - rsync -rv ./public/* "$SERVER_USERNAME_QA@$SERVER_HOST_QA:$SERVER_DIR_QA"
+
+deploy:prod:
+  extends: .set_up_ssh_prod
+  stage: deploy
+  environment:
+    name: Production
+    url: $SERVER_HOST_PROD
+  only:
+    - master
+  script:
+    - apt-get update
+    - apt-get install rsync -y
+    - rsync -rv ./public/* "$SERVER_USERNAME_PROD@$SERVER_HOST_PROD:$SERVER_DIR_PROD"

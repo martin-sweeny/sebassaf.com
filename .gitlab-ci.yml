@@ -1,0 +1,24 @@
+image: node:12.4.0
+
+before_script:
+  - date
+  - npm update --g yarn
+  - yarn --version
+after_script:
+  - date
+
+cache:
+  untracked: true
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+stages:
+  - prebuild
+  - build
+  - deploy
+
+include:
+  - local: .gitlab/ci/includes.gitlab-ci.yml
+  - local: .gitlab/ci/prebuild.gitlab-ci.yml
+  - local: .gitlab/ci/build.gitlab-ci.yml
+  - local: .gitlab/ci/deploy.gitlab-ci.yml
