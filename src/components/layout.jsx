@@ -29,8 +29,6 @@ const GlobalStyle = () => (
 	/>
 )
 
-const Content = styled.section``
-
 const Layout = ({ children }) => (
 	<StaticQuery
 		query={graphql`
@@ -45,11 +43,9 @@ const Layout = ({ children }) => (
 		render={data => (
 			<>
 				<GlobalStyle />
-
 				<Header />
-				<Content>
-					<div>{children}</div>
-				</Content>
+
+				{children}
 			</>
 		)}
 	/>
