@@ -40,6 +40,8 @@ const styles = {
 		p {
 			font-size: 18px;
 			line-height: 22px;
+			margin-bottom: 55px;
+			margin-top: 55px;
 			max-width: 500px;
 			text-align: center;
 		}
