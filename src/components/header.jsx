@@ -94,10 +94,10 @@ export default () => {
 				<styles.Menu>
 					<ul>
 						<li>
-							<a href="#">About</a>
+							<a href="/#">About</a>
 						</li>
 						<li>
-							<a href="#/contact">Contact</a>
+							<a href="/#/contact">Contact</a>
 						</li>
 						<li>
 							<Link to="/blog">Blog</Link>
