@@ -4,6 +4,10 @@ import styled from '@emotion/styled'
 import { StaticQuery, graphql } from 'gatsby'
 import { Global, css } from '@emotion/core'
 
+import { white, primary } from '../utils/colours'
+
+const fontStack = `montserrat, sans-serif`
+
 const GlobalStyle = () => (
 	<Global
 		styles={css`
@@ -13,11 +17,12 @@ const GlobalStyle = () => (
 			}
 
 			body {
-				background: #fff;
+				background: ${white};
+				font-family: ${fontStack};
 			}
 
 			a {
-				color: #4b5f32;
+				color: ${primary};
 			}
 		`}
 	/>

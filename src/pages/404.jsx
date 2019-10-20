@@ -4,9 +4,7 @@ import styled from '@emotion/styled'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const PageStyles = styled.div`
-	color: #fff;
-`
+const PageStyles = styled.div``
 
 const NotFoundPage = () => (
 	<Layout>
