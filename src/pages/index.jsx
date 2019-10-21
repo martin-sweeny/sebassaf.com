@@ -4,6 +4,7 @@ import HeroBanner from '../components/hero-banner'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Services from '../components/services'
 
 const IndexPage = () => (
 	<Layout>
@@ -11,6 +12,7 @@ const IndexPage = () => (
 
 		<HeroBanner />
 		<Intro />
+		<Services />
 	</Layout>
 )
 

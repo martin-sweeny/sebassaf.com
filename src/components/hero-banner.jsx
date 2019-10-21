@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import { dark, secondary, primary, white } from '../utils/colours'
@@ -19,10 +19,10 @@ const styles = {
 
 		h1 {
 			color: ${dark};
+			font-weight: 900;
 			margin-bottom: 6vh;
 			position: relative;
 			text-align: center;
-			font-weight: 900;
 
 			&:after {
 				background: ${secondary};
