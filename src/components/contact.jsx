@@ -6,6 +6,8 @@ import { secondary, black, white, primary } from '../utils/colours'
 import { useStaticQuery } from 'gatsby'
 import { graphql } from 'gatsby'
 
+// TODO: Connect this to some lead gen site
+
 const styles = {
 	Contact: styled.section`
 		align-content: space-around;
