@@ -1,7 +1,5 @@
 import React from 'react'
 
-import Biography from '../components/biography'
-import Contact from '../components/contact'
 import HeroBanner from '../components/hero-banner'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
@@ -15,8 +13,6 @@ const IndexPage = () => (
 		<HeroBanner />
 		<Intro />
 		<Services />
-		<Contact />
-		<Biography />
 	</Layout>
 )
 
