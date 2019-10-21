@@ -6,6 +6,7 @@ import { Global, css } from '@emotion/core'
 import Biography from '../components/biography'
 import Contact from '../components/contact'
 import Header from './header'
+import Footer from './footer'
 
 import { white, primary } from '../utils/colours'
 
@@ -52,6 +53,7 @@ const Layout = ({ children }) => (
 
 				<Contact />
 				<Biography />
+				<Footer />
 			</>
 		)}
 	/>

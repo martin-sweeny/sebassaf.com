@@ -112,7 +112,7 @@ export default () => {
 	`)
 
 	return (
-		<styles.Biography>
+		<styles.Biography id="/biography">
 			<styles.Wrapper>
 				<styles.Foreground fluid={foreground.childImageSharp.fluid} />
 				<styles.Content>

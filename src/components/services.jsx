@@ -156,7 +156,7 @@ export default () => {
 	`)
 
 	return (
-		<styles.Services>
+		<styles.Services id="/services">
 			<header>
 				<h3>
 					Getting your shit together takes a few steps.
