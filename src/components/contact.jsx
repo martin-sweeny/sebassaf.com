@@ -84,7 +84,7 @@ export default () => {
 	`)
 
 	return (
-		<styles.Contact>
+		<styles.Contact id="/contact">
 			<div>
 				<form>
 					<h3>

@@ -71,6 +71,7 @@ const styles = {
 	Foreground: styled(Img)`
 		align-self: flex-end;
 		margin: 0 5vw 0 0;
+		pointer-events: none;
 		width: 45vw;
 	`,
 	Wrapper: styled.div`
