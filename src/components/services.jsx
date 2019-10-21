@@ -57,6 +57,30 @@ const styles = {
 	ServiceAside: styled.aside`
 		position: relative;
 		width: 50%;
+
+		.box-1,
+		.box-2 {
+			content: '';
+			position: absolute;
+			z-index: -1;
+		}
+
+		.box-1 {
+			background: ${secondary};
+			height: 35vw;
+			left: 50%;
+			margin: -17.5vw 0 0 -17.5vw;
+			top: 50%;
+			width: 35vw;
+		}
+
+		.box-2 {
+			background: ${accent};
+			height: 10vw;
+			right: 0;
+			top: ${Math.random() * 25 + 25}%;
+			width: 10vw;
+		}
 	`,
 	ServiceImage: styled(Img)`
 		height: 50%;
@@ -68,18 +92,6 @@ const styles = {
 		z-index: 1;
 
 		${({ i }) => `transform: translate3d(${35 * i}%, ${70 * i}%, 0);`}
-
-		&:after {
-			content: '';
-			height: 100px;
-			position: absolute;
-			width: 100px;
-			z-index: -1;
-
-			${({ i }) =>
-				i % 2 === 0
-					? `left: 100%; top: 100%; background: ${secondary};`
-					: `right: calc(100% - 40px); bottom: calc(100% - 40px); background: ${accent};`}
 	`,
 	ServicePreview: styled.div`
 		a {
@@ -166,6 +178,8 @@ export default () => {
 										fluid={node.childImageSharp.fluid}
 									/>
 								))}
+							<div className="box-1" />
+							<div className="box-2" />
 						</styles.ServiceAside>
 					)
 
