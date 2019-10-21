@@ -55,6 +55,7 @@ const styles = {
 		}
 	`,
 	ServiceAside: styled.aside`
+		overflow: hidden;
 		position: relative;
 		width: 50%;
 
@@ -94,19 +95,29 @@ const styles = {
 		${({ i }) => `transform: translate3d(${35 * i}%, ${70 * i}%, 0);`}
 	`,
 	ServicePreview: styled.div`
-		a {
+		* {
 			color: ${white};
 		}
 
 		> div {
 			align-items: center;
-			background: ${secondary};
+			background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 			display: flex;
 			flex-flow: column nowrap;
-			height: 20vh;
+			height: 30vw;
 			justify-content: center;
 			margin: 5vw;
+			position: relative;
 		}
+	`,
+	ServicePreviewBackground: styled(Img)`
+		height: 100%;
+		left: 0;
+		pointer-events: none;
+		position: absolute !important;
+		top: 0;
+		width: 100%;
+		z-index: -1;
 	`,
 }
 
@@ -121,6 +132,11 @@ const sliderSettings = {
 
 const prepareAnchor = name => name.toLowerCase().replace(/[^a-z0-9]/g, '-')
 
+const getServiceImages = (name, imageData) =>
+	imageData.allFile.edges.filter(({ node }) =>
+		node.relativePath.includes(name.toLowerCase())
+	)
+
 export default () => {
 	const data = useStaticQuery(graphql`
 		{
@@ -129,7 +145,7 @@ export default () => {
 					node {
 						relativePath
 						childImageSharp {
-							fluid(maxWidth: 1000, quality: 99) {
+							fluid(maxWidth: 3000, quality: 99) {
 								...GatsbyImageSharpFluid
 							}
 						}
@@ -158,6 +174,13 @@ export default () => {
 								Read more
 							</a>
 							{!!service.link && <Link to={service.link}>Read more</Link>}
+
+							<styles.ServicePreviewBackground
+								fluid={
+									getServiceImages(service.name, data)[0].node.childImageSharp
+										.fluid
+								}
+							/>
 						</div>
 					</styles.ServicePreview>
 				))}
@@ -167,24 +190,23 @@ export default () => {
 				{services.map((service, i) => {
 					const aside = (
 						<styles.ServiceAside>
-							{data.allFile.edges
-								.filter(({ node }) =>
-									node.relativePath.includes(service.name.toLowerCase())
-								)
-								.map(({ node }, i) => (
-									<styles.ServiceImage
-										i={i}
-										key={`services-${service.name.toLowerCase()}-${i}`}
-										fluid={node.childImageSharp.fluid}
-									/>
-								))}
+							{getServiceImages(service.name, data).map(({ node }, i) => (
+								<styles.ServiceImage
+									i={i}
+									key={`services-${service.name.toLowerCase()}-${i}`}
+									fluid={node.childImageSharp.fluid}
+								/>
+							))}
 							<div className="box-1" />
 							<div className="box-2" />
 						</styles.ServiceAside>
 					)
 
 					const content = (
-						<styles.Service key={`full-service-${i}`}>
+						<styles.Service
+							key={`full-service-${i}`}
+							id={`/services/${prepareAnchor(service.name)}`}
+						>
 							<div>
 								<h2>{service.name}</h2>
 								<p>
