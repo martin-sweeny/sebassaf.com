@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 
 import { accent, primary, white, secondary } from '../utils/colours'
 import services from '../data/services'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { useStaticQuery } from 'gatsby'
 
 const styles = {
@@ -20,24 +20,27 @@ const styles = {
 		width: 50%;
 
 		> div {
-			max-width: 35vw;
 			margin-left: auto;
 			margin-right: auto;
+			max-width: 35vw;
 			text-align: left;
 		}
 
 		strong {
+			display: block;
 			font-size: 24px;
 			font-weight: 300;
 			line-height: 29px;
 			margin-bottom: 2rem;
-
-			display: block;
 		}
 
 		p {
 			font-size: 14px;
 			line-height: 17px;
+		}
+
+		a {
+			font-weight: 700;
 		}
 	`,
 	Services: styled.section`
@@ -46,9 +49,9 @@ const styles = {
 		header {
 			background: ${primary};
 			color: ${white};
+			margin-bottom: -140px;
 			padding-bottom: 140px;
 			padding-top: 140px;
-			margin-bottom: -140px;
 		}
 	`,
 	ServiceAside: styled.aside`
@@ -56,18 +59,17 @@ const styles = {
 		width: 50%;
 	`,
 	ServiceImage: styled(Img)`
-		position: absolute !important;
-		overflow: visible !important;
-		left: 0;
-		top: 5vh;
 		height: 50%;
+		left: 0;
+		overflow: visible !important;
+		position: absolute !important;
+		top: 5vh;
 		width: 70%;
 		z-index: 1;
 
 		${({ i }) => `transform: translate3d(${35 * i}%, ${70 * i}%, 0);`}
 
 		&:after {
-
 			content: '';
 			height: 100px;
 			position: absolute;
@@ -143,6 +145,7 @@ export default () => {
 							<a href={`/#/services/${prepareAnchor(service.name)}`}>
 								Read more
 							</a>
+							{!!service.link && <Link to={service.link}>Read more</Link>}
 						</div>
 					</styles.ServicePreview>
 				))}
