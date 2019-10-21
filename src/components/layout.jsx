@@ -20,6 +20,7 @@ const GlobalStyle = () => (
 			body {
 				background: ${white};
 				font-family: ${fontStack};
+				overflow-x: hidden;
 			}
 
 			a {
