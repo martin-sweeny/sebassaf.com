@@ -4,6 +4,8 @@ import Img from 'gatsby-image'
 import { useStaticQuery } from 'gatsby'
 import { graphql } from 'gatsby'
 
+import CTA from './cta'
+
 import { primary, secondary } from '../utils/colours'
 
 const styles = {
@@ -32,13 +34,12 @@ const styles = {
 	`,
 	Content: styled.div`
 		max-width: 600px;
-		padding: 0 2.5vw;
+		padding: 6rem 2.5vw 0;
 		width: 50%;
 
 		h2 {
 			color: ${primary};
 			position: relative;
-			margin-bottom: 3rem;
 			margin-top: 3rem;
 			padding-bottom: 1rem;
 
@@ -66,11 +67,18 @@ const styles = {
 			font-size: 15px;
 			line-height: 18px;
 		}
-	`,
 
+		footer {
+			padding: 6rem 0;
+			text-align: center;
+		}
+	`,
+	CtaButton: styled(CTA)`
+		margin: 0 auto;
+	`,
 	Foreground: styled(Img)`
 		align-self: flex-end;
-		margin: 0 5vw 0 0;
+		margin: 0 5vw -20px 0;
 		pointer-events: none;
 		width: 45vw;
 	`,
@@ -153,6 +161,10 @@ export default () => {
 						malesuada fames ac turpis egestas. Integer non nulla imperdiet justo
 						commodo sollicitudin. Maecenas ac.
 					</p>
+
+					<footer>
+						<styles.CtaButton>Get in Touch</styles.CtaButton>
+					</footer>
 				</styles.Content>
 			</styles.Wrapper>
 
