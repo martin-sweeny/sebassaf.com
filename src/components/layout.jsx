@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import MediaQuery from 'react-responsive'
 import { StaticQuery, graphql } from 'gatsby'
 import { Global, css } from '@emotion/core'
 
@@ -56,7 +57,9 @@ const Layout = ({ children }) => (
 				{children}
 
 				<Contact />
-				<Biography />
+				<MediaQuery minWidth={768}>
+					<Biography />
+				</MediaQuery>
 				<Footer />
 			</>
 		)}

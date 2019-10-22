@@ -79,6 +79,19 @@ const styles = {
 				margin-right: 16px;
 			}
 		}
+
+		@media screen and (max-width: 768px) {
+			flex-flow: column nowrap;
+			padding: 10vh 15vw;
+
+			ul {
+				margin-left: 0;
+			}
+
+			input[type='email'] {
+				flex: 1;
+			}
+		}
 	`,
 }
 

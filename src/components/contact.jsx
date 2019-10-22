@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Img from 'gatsby-image'
+import MediaQuery from 'react-responsive'
 
 import { secondary, black, white, primary } from '../utils/colours'
 import { useStaticQuery } from 'gatsby'
@@ -61,6 +62,23 @@ const styles = {
 			font-size: 36px;
 			line-height: 44px;
 		}
+
+		@media screen and (max-width: 768px) {
+			padding: 10vh 5vw;
+
+			> div {
+				margin: 0;
+				width: 100%;
+			}
+
+			/* h3 {
+				font-size: 24px;
+			} */
+
+			input[type='email'] {
+				margin: 64px 0;
+			}
+		}
 	`,
 
 	Image: styled(Img)`
@@ -97,7 +115,9 @@ export default () => {
 					{/* TODO: Use CTA */}
 					<input type="submit" value="Get my copy!" />
 				</form>
-				<styles.Image fixed={data.file.childImageSharp.fixed} />
+				<MediaQuery minWidth={768}>
+					<styles.Image fixed={data.file.childImageSharp.fixed} />
+				</MediaQuery>
 			</div>
 		</styles.Contact>
 	)
