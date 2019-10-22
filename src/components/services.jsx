@@ -58,6 +58,7 @@ const styles = {
 		@media screen and (max-width: 768px) {
 			margin: 0;
 			position: relative;
+			padding: 25vh 5vw 10vh;
 			width: 100%;
 
 			> div {
