@@ -1,7 +1,13 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import MediaQuery from 'react-responsive'
 import { Link } from 'gatsby'
-import { dark, secondary, accent } from '../utils/colours'
+
+import { breakpoints } from './layout'
+
+import { dark, secondary, accent, white } from '../utils/colours'
+
+import MenuIcon from '../images/icon-menu.svg'
 
 const HEADER_HEIGHT = '78px'
 
@@ -21,6 +27,15 @@ const styles = {
 
 		li {
 			list-style: none;
+		}
+
+		@media screen and (max-width: 768px) {
+			background: ${white};
+
+			button {
+				background: transparent;
+				border: 0;
+			}
 		}
 	`,
 
@@ -53,6 +68,16 @@ const styles = {
 			position: absolute;
 			top: 0;
 			width: 100px;
+		}
+
+		@media screen and (max-width: 768px) {
+			font-size: 24px;
+			white-space: nowrap;
+
+			&:after,
+			&:before {
+				box-shadow: none;
+			}
 		}
 	`,
 
@@ -95,19 +120,24 @@ export default () => {
 		<styles.Header>
 			<styles.Wrapper>
 				<styles.Logo>Sebastian Assaf</styles.Logo>
-				<styles.Menu>
-					<ul>
-						<li>
-							<a href="/#">About</a>
-						</li>
-						<li>
-							<a href="/#/contact">Contact</a>
-						</li>
-						<li>
-							<Link to="/blog">Blog</Link>
-						</li>
-					</ul>
-				</styles.Menu>
+				<MediaQuery minWidth={768}>
+					<styles.Menu>
+						<ul>
+							<li>
+								<a href="/#">About</a>
+							</li>
+							<li>
+								<a href="/#/contact">Contact</a>
+							</li>
+							<li>
+								<Link to="/blog">Blog</Link>
+							</li>
+						</ul>
+					</styles.Menu>
+				</MediaQuery>
+				<button>
+					<MenuIcon />
+				</button>
 			</styles.Wrapper>
 		</styles.Header>
 	)

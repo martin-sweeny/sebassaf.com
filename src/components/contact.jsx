@@ -94,6 +94,7 @@ export default () => {
 
 					<input type="email" placeholder="Enter your email" />
 
+					{/* TODO: Use CTA */}
 					<input type="submit" value="Get my copy!" />
 				</form>
 				<styles.Image fixed={data.file.childImageSharp.fixed} />

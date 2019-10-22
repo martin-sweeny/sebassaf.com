@@ -3,8 +3,9 @@ import styled from '@emotion/styled'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { dark, secondary, primary, white } from '../utils/colours'
 import CTAButton from './cta'
+
+import { dark, secondary, primary, white } from '../utils/colours'
 
 const styles = {
 	HeroBanner: styled.section`
@@ -44,6 +45,17 @@ const styles = {
 			margin-top: 55px;
 			max-width: 500px;
 			text-align: center;
+		}
+		@media screen and (max-width: 768px) {
+			h1 {
+				font-size: 30px;
+				line-height: 37px;
+			}
+
+			p {
+				margin-left: 2vw;
+				margin-right: 2vw;
+			}
 		}
 	`,
 	BackgroundImage: styled(Img)`

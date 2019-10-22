@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Slider from 'react-slick'
 import Img from 'gatsby-image'
+import MediaQuery from 'react-responsive'
 
 import { accent, primary, white, secondary } from '../utils/colours'
 import services from '../data/services'
@@ -12,6 +13,17 @@ const styles = {
 	Content: styled.div`
 		display: flex;
 		flex-flow: row wrap;
+
+		@media screen and (max-width: 768px) {
+			background: ${white};
+			margin: 190px 5vw 0;
+			padding: 24px;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+
+			h2 {
+				margin-bottom: 100px;
+			}
+		}
 	`,
 	Service: styled.div`
 		padding: 25vh 2vw;
@@ -42,9 +54,20 @@ const styles = {
 		a {
 			font-weight: 700;
 		}
+
+		@media screen and (max-width: 768px) {
+			margin: 0;
+			position: relative;
+			width: 100%;
+
+			> div {
+				max-width: 100%;
+			}
+		}
 	`,
 	Services: styled.section`
 		text-align: center;
+		position: relative;
 
 		header {
 			background: ${primary};
@@ -165,61 +188,85 @@ export default () => {
 				</h3>
 			</header>
 
-			<Slider {...sliderSettings}>
-				{services.map((service, i) => (
-					<styles.ServicePreview key={`prev-service-${i}`}>
-						<div>
-							<h3>{service.name}</h3>
-							<a href={`/#/services/${prepareAnchor(service.name)}`}>
-								Read more
-							</a>
-							{!!service.link && <Link to={service.link}>Read more</Link>}
+			<MediaQuery minWidth={768}>
+				<Slider {...sliderSettings}>
+					{services.map((service, i) => (
+						<styles.ServicePreview key={`prev-service-${i}`}>
+							<div>
+								<h3>{service.name}</h3>
+								<a href={`/#/services/${prepareAnchor(service.name)}`}>
+									Read more
+								</a>
+								{!!service.link && <Link to={service.link}>Read more</Link>}
 
-							<styles.ServicePreviewBackground
-								fluid={
-									getServiceImages(service.name, data)[0].node.childImageSharp
-										.fluid
-								}
-							/>
-						</div>
-					</styles.ServicePreview>
-				))}
-			</Slider>
-
-			<styles.Content>
-				{services.map((service, i) => {
-					const aside = (
-						<styles.ServiceAside>
-							{getServiceImages(service.name, data).map(({ node }, i) => (
-								<styles.ServiceImage
-									i={i}
-									key={`services-${service.name.toLowerCase()}-${i}`}
-									fluid={node.childImageSharp.fluid}
+								<styles.ServicePreviewBackground
+									fluid={
+										getServiceImages(service.name, data)[0].node.childImageSharp
+											.fluid
+									}
 								/>
-							))}
-							<div className="box-1" />
-							<div className="box-2" />
-						</styles.ServiceAside>
-					)
+							</div>
+						</styles.ServicePreview>
+					))}
+				</Slider>
 
-					const content = (
-						<styles.Service
-							key={`full-service-${i}`}
-							id={`/services/${prepareAnchor(service.name)}`}
-						>
+				<styles.Content>
+					{services.map((service, i) => {
+						const aside = (
+							<styles.ServiceAside>
+								{getServiceImages(service.name, data).map(({ node }, i) => (
+									<styles.ServiceImage
+										i={i}
+										key={`services-${service.name.toLowerCase()}-${i}`}
+										fluid={node.childImageSharp.fluid}
+									/>
+								))}
+								<div className="box-1" />
+								<div className="box-2" />
+							</styles.ServiceAside>
+						)
+
+						const content = (
+							<styles.Service
+								key={`full-service-${i}`}
+								id={`/services/${prepareAnchor(service.name)}`}
+							>
+								<div>
+									<h2>{service.name}</h2>
+									<p>
+										<strong>{service.short}</strong>
+										{service.long}
+									</p>
+								</div>
+							</styles.Service>
+						)
+
+						return i % 2 === 0 ? [aside, content] : [content, aside]
+					})}
+				</styles.Content>
+			</MediaQuery>
+
+			<MediaQuery maxWidth={768}>
+				{services.map(service => (
+					<styles.Service>
+						<styles.ServicePreviewBackground
+							fluid={
+								getServiceImages(service.name, data)[0].node.childImageSharp
+									.fluid
+							}
+						/>
+
+						<styles.Content>
 							<div>
 								<h2>{service.name}</h2>
 								<p>
 									<strong>{service.short}</strong>
-									{service.long}
 								</p>
 							</div>
-						</styles.Service>
-					)
-
-					return i % 2 === 0 ? [aside, content] : [content, aside]
-				})}
-			</styles.Content>
+						</styles.Content>
+					</styles.Service>
+				))}
+			</MediaQuery>
 		</styles.Services>
 	)
 }

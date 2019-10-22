@@ -12,6 +12,10 @@ import { white, primary } from '../utils/colours'
 
 const fontStack = `montserrat, sans-serif`
 
+export const breakpoints = {
+	tablet: `768px`,
+}
+
 const GlobalStyle = () => (
 	<Global
 		styles={css`
