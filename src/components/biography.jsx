@@ -116,54 +116,88 @@ export default () => {
 			<styles.Wrapper>
 				<styles.Foreground fluid={foreground.childImageSharp.fluid} />
 				<styles.Content>
-					<h2>Meet Seb</h2>
+					<h2>Meet Sebastian</h2>
 					<strong>
-						Aenean tincidunt dictum massa ut auctor. In ut tellus varius, tempus
-						leo leu, pretium massa. Donec magna est, maximus et venenatis nec,
-						facilisis id neque.
+						Hey, Seb here.
+						<br />
+						<br />
+						Please allow me to introduce myself, since you may be wondering:
+						"Who is this Sebastian Assaf guy?”
 					</strong>
 					<p>
-						In malesuada sollicitudin quam et egestas. Donec lacinia venenatis
-						ex id vehicula. Donec id tristique mi. Nam rutrum dolor ac felis
-						sodales, a faucibus ex viverra. Sed nisl purus, mattis a dignissim
-						vitae, sagittis ut erat. Nam a diam et sapien iaculis tempus. Class
-						aptent taciti sociosqu ad litora torquent per conubia nostra, per
-						inceptos himenaeos. Donec feugiat massa convallis purus porttitor
-						pharetra. Duis dignissim enim a ex pretium, quis cursus lorem
-						fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et
-						ultrices posuere cubilia Curae; Proin non orci pharetra sapien
-						tincidunt fermentum non eget diam.
+						I'm actually a fairly normal guy, who went through a point where I
+						decided that I needed to get a handle on my business.
 						<br />
 						<br />
-						Vestibulum ullamcorper nulla vel erat aliquet, at gravida tellus
-						consequat. Pellentesque sagittis, mauris eu venenatis posuere, velit
-						neque sollicitudin metus, vel eleifend nisl odio non ligula. Sed
-						nisi ligula, porta at ultrices sed, tempus id elit. Quisque a orci
-						varius dui commodo condimentum. Mauris a justo leo. Suspendisse
-						condimentum nulla nulla, eget tristique mi ornare ac. Nunc rhoncus
-						lorem diam, ac faucibus dolor semper ut. Aenean lobortis elit eget
-						enim fringilla gravida. In sed commodo sem.
+						I won't get into the details, but I was going through a time where I
+						was involved in my first business opportunity, and struggling... and
+						I still had NO IDEA how to build a successful business and team. One
+						night, I had just finished making another endlessly unsuccessful
+						cold call, and I said "I am going to figure this out for myself,
+						whatever it takes".
 						<br />
 						<br />
-						Nullam convallis nisl eget enim porta, sed vulputate felis porta.
-						Aliquam mauris nisl, malesuada non consequat non, posuere sed
-						tortor. Vivamus vitae dolor at eros euismod molestie. Nullam
-						ultricies nisi at justo fermentum, nec rhoncus velit scelerisque.
-						Maecenas vitae neque semper, rhoncus quam sed, egestas odio.
-						Pellentesque tortor dolor, posuere vel augue et, luctus iaculis
-						odio. Cras hendrerit pellentesque ipsum.
+						Well, it wasn't so easy. I spent the next few years reading a lot of
+						books, going to seminars, and generally trying out a lot of crazy
+						stuff that I was learning. <br />
+						<br />
+						My epiphany came when I started searching online and learning from
+						people that were successfully building their businesses and living
+						their lives.
 						<br />
 						<br />
-						Vestibulum aliquet enim dapibus vehicula commodo. Aliquam enim enim,
-						egestas suscipit lacus eu, condimentum semper purus. Proin quis
-						massa ante. Vestibulum sed neque sed odio luctus consectetur vitae a
-						dolor. Pellentesque habitant morbi tristique senectus et netus et
-						malesuada fames ac turpis egestas. Integer non nulla imperdiet justo
-						commodo sollicitudin. Maecenas ac.
+						To make a long story short, I started moving forward by learning
+						from these "mentors", and taking the things I learned... and started
+						applying them to my life and business.
+						<br />
+						<br />
+						I have now come to believe something that I think is very
+						important...
+						<br />
+						<br />
+						If you don't know how to market your business effectively, then
+						you're probably going to approach your business feeling "less than
+						successful". It's not an easy thing to explain to someone who
+						doesn't "get it", but I'll bet that you know EXACTLY what I'm
+						talking about.
+						<br />
+						<br />
+						On the other hand, if you DO know how to market your business,
+						you're going to have an inner confidence that other people can sense
+						INSTANTLY.
+						<br />
+						<br />
+						You might be asking is "Why should I believe what Sebastian says?".
+						<br />
+						<br />
+						And my answer to you is that you SHOULDN'T just blindly believe me.
+						<br />
+						<br />
+						I want you to TRY what you learn.
+						<br />
+						<br />
+						I think you'll find that I'm not interested in things that don't
+						work. I like stuff that gets results. And BIG results, at that.
+						<br />
+						<br />
+						Only after you've seen that this stuff is REAL... do I want you to
+						"believe" me.
+						<br />
+						<br />
+						I believe this information is some of the best in the world, and I
+						stand behind it. I honestly hope you get a TON of value from it.
+						<br />
+						<br />
+						To your inevitable success,
+						<br />
+						<br />
+						Sebastian Assaf
 					</p>
 
 					<footer>
-						<styles.CtaButton>Get in Touch</styles.CtaButton>
+						<styles.CtaButton href="https://app.acuityscheduling.com/schedule.php?owner=18476238">
+							Let's Talk
+						</styles.CtaButton>
 					</footer>
 				</styles.Content>
 			</styles.Wrapper>

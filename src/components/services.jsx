@@ -194,7 +194,7 @@ export default () => {
 					{services.map((service, i) => (
 						<styles.ServicePreview key={`prev-service-${i}`}>
 							<div>
-								<h3>{service.name}</h3>
+								<h3>{service.headline}</h3>
 								<a href={`/#/services/${prepareAnchor(service.name)}`}>
 									Read more
 								</a>
@@ -233,7 +233,7 @@ export default () => {
 								id={`/services/${prepareAnchor(service.name)}`}
 							>
 								<div>
-									<h2>{service.name}</h2>
+									<h2>{service.headline}</h2>
 									<p>
 										<strong>{service.short}</strong>
 										{service.long}
@@ -259,7 +259,7 @@ export default () => {
 
 						<styles.Content>
 							<div>
-								<h2>{service.name}</h2>
+								<h2>{service.headline}</h2>
 								<p>
 									<strong>{service.short}</strong>
 								</p>

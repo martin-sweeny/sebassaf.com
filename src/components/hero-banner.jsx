@@ -92,12 +92,18 @@ export default () => (
 			)}
 		/>
 
-		<h1>Living Your Best Life</h1>
+		<h1>Helping Entrepreneurs Grow</h1>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et dolor in
-			velit imperdiet posuere. Praesent diam massa, scelerisque vel posuere non,
-			vulputate accumsan urna.
+			I help entrepreneurs optimize their minds, bodies, and businesses through
+			creative, clear and well executed strategies. Achieving your goals is not
+			always simple, and rarely easy. It often takes discipline, guidance, and
+			accountability. This is where working together directly can finally help
+			you hit your objectives.
 		</p>
-		<CTAButton>Get in Touch</CTAButton>
+		<CTAButton
+			href={'https://app.acuityscheduling.com/schedule.php?owner=18476238'}
+		>
+			Let's Talk
+		</CTAButton>
 	</styles.HeroBanner>
 )

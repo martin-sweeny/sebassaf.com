@@ -1,47 +1,39 @@
 export default [
 	{
-		name: 'Mind',
+		name: 'business',
+		headline: 'Grow Your Business',
 
-		short: `Maecenas eget libero suscipit, venenatis erat id, mattis leo. Sed hendrerit diam tortor. Nunc iaculis vulputate ante, vitae rutrum sapien dignissim bibendum. Donec magna est, maximus et venenatis nec, facilisis id neque. Nullam condimentum tristique nisl, a viverra odio condimentum at.`,
+		short: `Your business is unique, so why isn’t your marketing strategy? One size fits all solutions offered by agencies just don’t apply to every business. For you to experience the growth you’re looking for, you want creative, clear, and well executed marketing strategies.`,
 
-		long: `Ut porta libero id vulputate lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum id viverra dui. Donec vitae dignissim lacus. In dictum sagittis lobortis.
+		long: ` Working with a partner like Sebastian can help you do just that. Through consulting packages that offer monthly strategy sessions to develop custom marketing plans, quick and reliable execution, and weekly reports to show progress, you can rest assured that you will be moving in the right direction. All packages include advertising spend, which means that every dollar will be invested as wisely as possible to get you the best results possible. If you’re ready to take on more business, book a call with Sebastian now to learn what is possible for the future of your business.
 
-Cras tellus lacus, commodo vel lorem viverra, tincidunt luctus lacus. Aliquam mollis scelerisque elit, a dignissim nibh consectetur et. Nulla vitae suscipit orci. Integer nec dolor et eros rhoncus efficitur. Donec accumsan neque quis libero consectetur, et sagittis est dapibus. Donec a sagittis ante, sed venenatis magna. Integer pharetra rhoncus congue.
+Sebastian has a very diverse background in marketing and sales. From working with small businesses, entrepreneurs, and even fortune 500 companies, he has developed a strong knowledge base and understanding of what works.
 
-estibulum condimentum, nisl ac condimentum gravida, justo urna consectetur nunc, sit amet gravida massa risus sed ligula. Donec ac viverra leo. Sed commodo velit risus, id hendrerit sem hendrerit eget. Suspendisse risus tellus, commodo at fermentum non, accumsan id ligula.
+He’s traveled around the world attending various workshops, courses, and camps and continues to develop his knowledge on effective marketing strategies in todays world.
 
-Phasellus venenatis vehicula augue quis porttitor. Aliquam venenatis sem nisl, at finibus velit ultricies vulputate. Praesent imperdiet egestas justo vitae interdum.
 
-Nulla eleifend leo ac mi imperdiet finibus nec eu sapien. Integer vel scelerisque tellus. Duis eu ipsum porttitor, consectetur nisi id, interdum felis. Cras porta leo quis elit ornare sodales. Phasellus lobortis nunc in vulputate convallis. Donec et eros felis.`,
+What are you waiting for? Book a call now and see what your business has been missing!`,
 	},
 	{
-		name: 'Body',
+		name: 'body',
+		headline: 'Optimize Your Health',
 
-		short: `Maecenas eget libero suscipit, venenatis erat id, mattis leo. Sed hendrerit diam tortor. Nunc iaculis vulputate ante, vitae rutrum sapien dignissim bibendum. Donec magna est, maximus et venenatis nec, facilisis id neque. Nullam condimentum tristique nisl, a viverra odio condimentum at.`,
+		short: `After facing painful health challenges at the age of 20 and being told by doctors that there was absolutely nothing he could do, Sebastian turned to yoga as a way to find healing. From practicing different styles like Kundalini, Hatha, Ashtanga, Bikram and Vinyasa, and through certain lifestyle changes, Sebastian was able to completely heal his body, and also found many other benefits along the way. `,
 
-		long: `Ut porta libero id vulputate lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum id viverra dui. Donec vitae dignissim lacus. In dictum sagittis lobortis.
+		long: `Feeling the desire to share the well-being he discovered, he completed a 200hr teacher training in Vinyasa, followed by an additional 40hr training in Yin Yoga. Sebastian continues to deepen his personal and professional practice, and remains committed to sharing wisdom around health and well being.
 
-Cras tellus lacus, commodo vel lorem viverra, tincidunt luctus lacus. Aliquam mollis scelerisque elit, a dignissim nibh consectetur et. Nulla vitae suscipit orci. Integer nec dolor et eros rhoncus efficitur. Donec accumsan neque quis libero consectetur, et sagittis est dapibus. Donec a sagittis ante, sed venenatis magna. Integer pharetra rhoncus congue.
-
-estibulum condimentum, nisl ac condimentum gravida, justo urna consectetur nunc, sit amet gravida massa risus sed ligula. Donec ac viverra leo. Sed commodo velit risus, id hendrerit sem hendrerit eget. Suspendisse risus tellus, commodo at fermentum non, accumsan id ligula.
-
-Phasellus venenatis vehicula augue quis porttitor. Aliquam venenatis sem nisl, at finibus velit ultricies vulputate. Praesent imperdiet egestas justo vitae interdum.
-
-Nulla eleifend leo ac mi imperdiet finibus nec eu sapien. Integer vel scelerisque tellus. Duis eu ipsum porttitor, consectetur nisi id, interdum felis. Cras porta leo quis elit ornare sodales. Phasellus lobortis nunc in vulputate convallis. Donec et eros felis.`,
+Sebastian has a strong knowledge on what it really takes to have optimal health and well being. If you are ready to bring your energy levels to places they have never been before, then book a call right now to see just what is possible for you!`,
 	},
 	{
-		name: 'Business',
+		name: 'mind',
+		headline: 'Expand Your Mind',
 
-		short: `Maecenas eget libero suscipit, venenatis erat id, mattis leo. Sed hendrerit diam tortor. Nunc iaculis vulputate ante, vitae rutrum sapien dignissim bibendum. Donec magna est, maximus et venenatis nec, facilisis id neque. Nullam condimentum tristique nisl, a viverra odio condimentum at.`,
+		short: `If you’re looking to grow, it all starts with what you know. Learning and developing new skill sets is one of the quickest ways to move forward with your goals. Through the years, Sebastian has collected a treasure chest of knowledge that can help you learn exactly what you need to hit your next milestone.`,
 
-		long: `Ut porta libero id vulputate lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum id viverra dui. Donec vitae dignissim lacus. In dictum sagittis lobortis.
+		long: `Sometimes, it’s not exactly what you know, but what you think you know that just isn’t so. These are often called “limiting beliefs”, and it takes a trained outside perspective to help destroy these false premises that are holding you back from achieving what you want.
 
-Cras tellus lacus, commodo vel lorem viverra, tincidunt luctus lacus. Aliquam mollis scelerisque elit, a dignissim nibh consectetur et. Nulla vitae suscipit orci. Integer nec dolor et eros rhoncus efficitur. Donec accumsan neque quis libero consectetur, et sagittis est dapibus. Donec a sagittis ante, sed venenatis magna. Integer pharetra rhoncus congue.
+Whatever the case may be, Sebastian is well equipped to help you grow. He has coached many individuals and teams before to help them hit their dreams, goals and targets.
 
-estibulum condimentum, nisl ac condimentum gravida, justo urna consectetur nunc, sit amet gravida massa risus sed ligula. Donec ac viverra leo. Sed commodo velit risus, id hendrerit sem hendrerit eget. Suspendisse risus tellus, commodo at fermentum non, accumsan id ligula.
-
-Phasellus venenatis vehicula augue quis porttitor. Aliquam venenatis sem nisl, at finibus velit ultricies vulputate. Praesent imperdiet egestas justo vitae interdum.
-
-Nulla eleifend leo ac mi imperdiet finibus nec eu sapien. Integer vel scelerisque tellus. Duis eu ipsum porttitor, consectetur nisi id, interdum felis. Cras porta leo quis elit ornare sodales. Phasellus lobortis nunc in vulputate convallis. Donec et eros felis.`,
+If you’re ready to become the best version of yourself, then book a call now to discover your potential!`,
 	},
 ]

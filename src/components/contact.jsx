@@ -2,10 +2,11 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Img from 'gatsby-image'
 import MediaQuery from 'react-responsive'
-
-import { secondary, black, white, primary } from '../utils/colours'
 import { useStaticQuery } from 'gatsby'
 import { graphql } from 'gatsby'
+
+import { secondary, black, white, primary } from '../utils/colours'
+import CTA from './cta'
 
 // TODO: Connect this to some lead gen site
 
@@ -34,7 +35,7 @@ const styles = {
 			max-width: 500px;
 		}
 
-		input {
+		input[type='email'] {
 			background: ${white};
 			border: 0;
 			border-bottom: 4px solid ${primary};
@@ -45,20 +46,12 @@ const styles = {
 			width: 100%;
 		}
 
-		input[type='submit'],
 		h3 {
 			font-weight: 700;
 			color: ${black};
 		}
 
 		h3 {
-			font-size: 36px;
-			line-height: 44px;
-		}
-
-		input[type='submit'] {
-			background: transparent;
-			border: 0;
 			font-size: 36px;
 			line-height: 44px;
 		}
@@ -101,19 +94,52 @@ export default () => {
 		}
 	`)
 
+	const formProps = {
+		action:
+			'https://gmail.us20.list-manage.com/subscribe/post?u=8350b82f52342489d395d0309&amp;id=73ad8f1d93',
+		method: 'post',
+		id: 'mc-embedded-subscribe-form',
+		name: 'mc-embedded-subscribe-form',
+		class: 'validate',
+		target: '_blank',
+	}
+
 	return (
 		<styles.Contact id="/contact">
 			<div>
-				<form>
+				<form {...formProps} novalidate>
 					<h3>
-						Life can be pretty sweet. Get in touch with Seb today, and satisfy
-						your sweettooth.
+						Get my super simple marketing acceleration guide and learn the 5
+						keys to growing your business quickly without any confusing or
+						complicated technical knowledge.
 					</h3>
 
-					<input type="email" placeholder="Enter your email" />
+					<input
+						type="email"
+						className="required email"
+						id="mce-EMAIL"
+						name="EMAIL"
+						placeholder="Enter your email"
+					/>
 
 					{/* TODO: Use CTA */}
-					<input type="submit" value="Get my copy!" />
+					<CTA
+						type="submit"
+						name="subscribe"
+						id="mc-embedded-subscribe"
+						class="button"
+						isFormSubmit={true}
+						value="Get my copy!"
+					/>
+
+					<div style={{ position: `absolute`, left: -5000 }} aria-hidden="true">
+						<input
+							type="text"
+							name="b_8350b82f52342489d395d0309_73ad8f1d93"
+							tabindex="-1"
+							value=""
+						/>
+					</div>
 				</form>
 				<MediaQuery minWidth={768}>
 					<styles.Image fixed={data.file.childImageSharp.fixed} />

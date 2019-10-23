@@ -159,9 +159,9 @@ export default () => {
 						<li>
 							<a href="/#/contact">Contact</a>
 						</li>
-						<li>
+						{/* <li>
 							<Link to="/blog">Blog</Link>
-						</li>
+						</li> */}
 					</ul>
 				</styles.Menu>
 			</MediaQuery>
@@ -179,9 +179,9 @@ export default () => {
 							<li>
 								<a href="/#/contact">Contact</a>
 							</li>
-							<li>
+							{/* <li>
 								<Link to="/blog">Blog</Link>
-							</li>
+							</li> */}
 						</ul>
 					</styles.Menu>
 				</MediaQuery>

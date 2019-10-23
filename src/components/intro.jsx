@@ -126,47 +126,44 @@ export default () => {
 						<hr />
 					</MediaQuery>
 					<p>
-						Sed quis porttitor sapien. Pellentesque leo est, tincidunt vitae sem
-						id, hendrerit dignissim arcu. Donec mattis risus eu ipsum dignissim,
-						eu ornare elit ultrices. Aenean mauris quam, luctus at mi id,
-						fringilla efficitur ex. Morbi ullamcorper enim sapien, sit amet
-						posuere turpis congue nec. Etiam et lacus consectetur nisi aliquam
-						molestie.
+						Objective Perspective: It’s not always easy solving a problem when
+						you’re in it. When you get a fresh objective perspective, you get
+						new ideas that you may not have thought of, or at the very least
+						confirmation to move forward in the right direction.
 					</p>
 					<p>
-						Sed tempor odio suscipit, pellentesque lacus et, efficitur justo.
-						Etiam pretium leo ut ornare porta. Suspendisse finibus non enim
-						pulvinar finibus. Ut suscipit, velit id vulputate semper, purus
-						lacus maximus nisl, id imperdiet quam mi nec augue.
+						Over 10 Years of Experience: Working with someone who knows the lay
+						of the land makes things easy. Problems get solved quickly when
+						working with someone who has seen your problem before and knows
+						what’s worked for others.
 					</p>
 					<p>
-						Sed nec erat quis justo ullamcorper efficitur. Praesent vel semper
-						diam, ac pretium dolor. Pellentesque volutpat nec purus non porta.
-						Cras rutrum lorem egestas tellus eleifend aliquet. Phasellus nec
-						semper nibh. Cras eget iaculis risus. Vestibulum porta velit in
-						neque tincidunt, a convallis orci vestibulum. Nulla odio libero,
-						iaculis eget urna iaculis, eleifend lacinia risus.
+						Reliable and Trustworthy: Whether it be a personal or professional
+						problem, solutions often require you to become vulnerable. Having
+						someone who can provide security and follow through is essential.
 					</p>
 					<p>
-						Phasellus in pharetra tortor. Sed euismod cursus commodo. Mauris
-						sapien leo, auctor a iaculis ut, lobortis vitae ex. Cras sit amet
-						lacus eget ipsum ornare feugiat. Nulla hendrerit in enim at lacinia.
-						Vestibulum non eros ut velit consequat feugiat. Ut feugiat vehicula
-						sem vitae congue.
+						Guaranteed Results: Nobody wants to pay for something they didn’t
+						ask for, so why should you? If you’re not satisfied with your
+						results, get your money back, no questions asked.
 					</p>
 					<MediaQuery maxWidth={768}>
-						<CTA>Get in Touch</CTA>
+						<CTA href="https://app.acuityscheduling.com/schedule.php?owner=18476238">
+							Let's Talk
+						</CTA>
 					</MediaQuery>
 				</styles.Content>
 			</styles.ContentWrapper>
 
 			<MediaQuery minWidth={768}>
 				<div style={{ height: 80 }} />
-				<CTA>Get in Touch</CTA>
+				<CTA href="https://app.acuityscheduling.com/schedule.php?owner=18476238">
+					Let's Talk
+				</CTA>
 				<br />
 				<br />
 			</MediaQuery>
-			<a href="#">Or, keep reading</a>
+			<a href="/#/services">Or, keep reading</a>
 		</styles.Intro>
 	)
 }
