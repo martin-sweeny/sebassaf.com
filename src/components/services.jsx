@@ -182,11 +182,7 @@ export default () => {
 	return (
 		<styles.Services id="/services">
 			<header>
-				<h3>
-					Getting your shit together takes a few steps.
-					<br />
-					Seb can help with them all.
-				</h3>
+				<h3>Everything you need.</h3>
 			</header>
 
 			<MediaQuery minWidth={768}>

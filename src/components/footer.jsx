@@ -124,15 +124,7 @@ export default () => (
 				Write to Seb
 				<br />
 				<br />
-				<a href="mailto:contact@sebassaf.consulting">
-					contact@sebassaf.consulting
-				</a>
-			</p>
-			<p>
-				Give him a shout
-				<br />
-				<br />
-				<a href="tel:5145551234">(514) 555-1234</a>
+				<a href="mailto:hello@sebassaf.com">hello@sebassaf.com</a>
 			</p>
 		</div>
 
