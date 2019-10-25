@@ -1,13 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
+import MediaQuery from 'react-responsive'
 import { StaticQuery, graphql } from 'gatsby'
 import { Global, css } from '@emotion/core'
 
+import Biography from '../components/biography'
+import Contact from '../components/contact'
 import Header from './header'
+import Footer from './footer'
+
 import { white, primary } from '../utils/colours'
 
 const fontStack = `montserrat, sans-serif`
+
+export const breakpoints = {
+	tablet: `768px`,
+}
 
 const GlobalStyle = () => (
 	<Global
@@ -20,6 +28,7 @@ const GlobalStyle = () => (
 			body {
 				background: ${white};
 				font-family: ${fontStack};
+				overflow-x: hidden;
 			}
 
 			a {
@@ -46,6 +55,12 @@ const Layout = ({ children }) => (
 				<Header />
 
 				{children}
+
+				<Contact />
+				<MediaQuery minWidth={768}>
+					<Biography />
+				</MediaQuery>
+				<Footer />
 			</>
 		)}
 	/>

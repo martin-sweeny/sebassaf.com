@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { StaticQuery } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Color from 'color'
+
+import CTAButton from './cta'
 
 import { dark, secondary, primary, white } from '../utils/colours'
 
@@ -19,10 +20,10 @@ const styles = {
 
 		h1 {
 			color: ${dark};
+			font-weight: 900;
 			margin-bottom: 6vh;
 			position: relative;
 			text-align: center;
-			font-weight: 900;
 
 			&:after {
 				background: ${secondary};
@@ -45,6 +46,17 @@ const styles = {
 			max-width: 500px;
 			text-align: center;
 		}
+		@media screen and (max-width: 768px) {
+			h1 {
+				font-size: 30px;
+				line-height: 37px;
+			}
+
+			p {
+				margin-left: 2vw;
+				margin-right: 2vw;
+			}
+		}
 	`,
 	BackgroundImage: styled(Img)`
 		height: 100%;
@@ -53,34 +65,6 @@ const styles = {
 		top: 0;
 		width: 100%;
 		z-index: -1;
-	`,
-	CTA: styled.a`
-		background: ${Color(primary)
-			.saturate(50)
-			.lighten(1.5)
-			.toString()};
-		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15),
-			0 1px 3px rgba(0, 0, 0, 0.15);
-		color: ${white};
-		cursor: pointer;
-		display: inline-block;
-		font-size: 24px;
-		font-weight: 700;
-		height: 64px;
-		line-height: 64px;
-		text-align: center;
-		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
-		width: 311px;
-
-		&:hover,
-		&:focus {
-			background: ${Color(primary)
-				.saturate(100)
-				.lighten(1.75)
-				.toString()};
-			box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.15),
-				0 1px 2px rgba(0, 0, 0, 0.5);
-		}
 	`,
 }
 
@@ -108,12 +92,18 @@ export default () => (
 			)}
 		/>
 
-		<h1>Living Your Best Life</h1>
+		<h1>Helping Entrepreneurs Grow</h1>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et dolor in
-			velit imperdiet posuere. Praesent diam massa, scelerisque vel posuere non,
-			vulputate accumsan urna.
+			I help entrepreneurs optimize their minds, bodies, and businesses through
+			creative, clear and well executed strategies. Achieving your goals is not
+			always simple, and rarely easy. It often takes discipline, guidance, and
+			accountability. This is where working together directly can finally help
+			you hit your objectives.
 		</p>
-		<styles.CTA>Get in Touch</styles.CTA>
+		<CTAButton
+			href={'https://app.acuityscheduling.com/schedule.php?owner=18476238'}
+		>
+			Let's Talk
+		</CTAButton>
 	</styles.HeroBanner>
 )
