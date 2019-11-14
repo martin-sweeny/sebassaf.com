@@ -33,8 +33,9 @@ const styles = {
 		width: 100%;
 	`,
 	Content: styled.div`
-		max-width: 600px;
-		padding: 6rem 2.5vw 0;
+		/* max-width: 600px; */
+
+		padding: 6rem 5vw 0;
 		width: 50%;
 
 		h2 {
@@ -86,7 +87,7 @@ const styles = {
 		align-items: center;
 		display: flex;
 		flex-flow: row nowrap;
-		justify-content: center;
+		justify-content: flex-end;
 		width: 100%;
 	`,
 }
@@ -94,14 +95,14 @@ const styles = {
 export default () => {
 	const { foreground, background } = useStaticQuery(graphql`
 		query {
-			foreground: file(relativePath: { eq: "bio-foreground.png" }) {
-				childImageSharp {
-					fluid(maxWidth: 1500) {
-						...GatsbyImageSharpFluid
-					}
-				}
-			}
-			background: file(relativePath: { eq: "bio-background.jpg" }) {
+			# foreground: file(relativePath: { eq: "bio-foreground.png" }) {
+			# 	childImageSharp {
+			# 		fluid(maxWidth: 1500) {
+			# 			...GatsbyImageSharpFluid
+			# 		}
+			# 	}
+			# }
+			background: file(relativePath: { eq: "seb-assaf-in-greece.jpg" }) {
 				childImageSharp {
 					fluid(maxWidth: 3000) {
 						...GatsbyImageSharpFluid
@@ -114,7 +115,7 @@ export default () => {
 	return (
 		<styles.Biography id="/biography">
 			<styles.Wrapper>
-				<styles.Foreground fluid={foreground.childImageSharp.fluid} />
+				{/* <styles.Foreground fluid={foreground.childImageSharp.fluid} /> */}
 				<styles.Content>
 					<h2>Meet Sebastian</h2>
 					<strong>
