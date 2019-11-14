@@ -92,7 +92,7 @@ export default () => (
 			)}
 		/>
 
-		<h1>Helping Entrepreneurs Grow</h1>
+		<h1>Digital Marketing Consultant</h1>
 		<p>
 			I help entrepreneurs optimize their minds, bodies, and businesses through
 			creative, clear and well executed strategies. Achieving your goals is not
