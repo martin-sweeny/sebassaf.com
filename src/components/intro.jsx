@@ -100,7 +100,7 @@ const styles = {
 export default () => {
 	const data = useStaticQuery(graphql`
 		query {
-			seb: file(relativePath: { eq: "seb-assaf-facing-camera.jpg" }) {
+			seb: file(relativePath: { eq: "seb-assaf-sitting-stairs.jpg" }) {
 				childImageSharp {
 					fluid(maxWidth: 500, quality: 99) {
 						...GatsbyImageSharpFluid
