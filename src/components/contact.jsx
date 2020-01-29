@@ -81,7 +81,7 @@ const styles = {
 	`,
 }
 
-export default () => {
+const Contact = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			file(relativePath: { eq: "contact-image.png" }) {
@@ -100,14 +100,14 @@ export default () => {
 		method: 'post',
 		id: 'mc-embedded-subscribe-form',
 		name: 'mc-embedded-subscribe-form',
-		class: 'validate',
+		className: 'validate',
 		target: '_blank',
 	}
 
 	return (
 		<styles.Contact id="/contact">
 			<div>
-				<form {...formProps} novalidate>
+				<form {...formProps} noValidate>
 					<h3>
 						Get my super simple marketing acceleration guide and learn the 5
 						keys to growing your business quickly without any confusing or
@@ -127,7 +127,7 @@ export default () => {
 						type="submit"
 						name="subscribe"
 						id="mc-embedded-subscribe"
-						class="button"
+						className="button"
 						isFormSubmit={true}
 						value="Get my copy!"
 					/>
@@ -136,7 +136,7 @@ export default () => {
 						<input
 							type="text"
 							name="b_8350b82f52342489d395d0309_73ad8f1d93"
-							tabindex="-1"
+							tabIndex="-1"
 							value=""
 						/>
 					</div>
@@ -148,3 +148,5 @@ export default () => {
 		</styles.Contact>
 	)
 }
+
+export default Contact

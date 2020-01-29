@@ -161,7 +161,7 @@ const getServiceImages = (name, imageData) =>
 		node.relativePath.includes(name.toLowerCase())
 	)
 
-export default () => {
+const Services = () => {
 	const data = useStaticQuery(graphql`
 		{
 			allFile(filter: { relativePath: { regex: "/^services/" } }) {
@@ -210,12 +210,14 @@ export default () => {
 				<styles.Content>
 					{services.map((service, i) => {
 						const aside = (
-							<styles.ServiceAside>
+							<styles.ServiceAside
+								key={`services-${service.name.toLowerCase()}-${i}`}
+							>
 								{getServiceImages(service.name, data).map(({ node }, i) => (
 									<styles.ServiceImage
 										i={i}
-										key={`services-${service.name.toLowerCase()}-${i}`}
 										fluid={node.childImageSharp.fluid}
+										key={`services-${service.name.toLowerCase()}-img-${i}`}
 									/>
 								))}
 								<div className="box-1" />
@@ -245,7 +247,7 @@ export default () => {
 
 			<MediaQuery maxWidth={768}>
 				{services.map(service => (
-					<styles.Service>
+					<styles.Service key={service.name}>
 						<styles.ServicePreviewBackground
 							fluid={
 								getServiceImages(service.name, data)[0].node.childImageSharp
@@ -267,3 +269,4 @@ export default () => {
 		</styles.Services>
 	)
 }
+export default Services

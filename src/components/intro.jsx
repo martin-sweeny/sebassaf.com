@@ -97,7 +97,7 @@ const styles = {
 	`,
 }
 
-export default () => {
+const Intro = () => {
 	const data = useStaticQuery(graphql`
 		query {
 			seb: file(relativePath: { eq: "seb-assaf-sitting-stairs.jpg" }) {
@@ -149,7 +149,7 @@ export default () => {
 					</p>
 					<MediaQuery maxWidth={768}>
 						<CTA href="https://app.acuityscheduling.com/schedule.php?owner=18476238">
-							Let's Talk
+							Let&apos;s Talk
 						</CTA>
 					</MediaQuery>
 				</styles.Content>
@@ -158,7 +158,7 @@ export default () => {
 			<MediaQuery minWidth={768}>
 				<div style={{ height: 80 }} />
 				<CTA href="https://app.acuityscheduling.com/schedule.php?owner=18476238">
-					Let's Talk
+					Let&apos;s Talk
 				</CTA>
 				<br />
 				<br />
@@ -167,3 +167,5 @@ export default () => {
 		</styles.Intro>
 	)
 }
+
+export default Intro

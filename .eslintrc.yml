@@ -1,3 +1,10 @@
 parser: babel-eslint
+env:
+  node: true
 extends:
-  - "plugin:prettier/recommended"
+  - 'eslint:recommended'
+  - 'plugin:prettier/recommended'
+  - 'plugin:react/recommended'
+settings:
+  react:
+    version: 'detect'

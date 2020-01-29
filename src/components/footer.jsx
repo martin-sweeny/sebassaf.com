@@ -95,7 +95,7 @@ const styles = {
 	`,
 }
 
-export default () => (
+const Footer = () => (
 	<styles.Footer>
 		<ul>
 			<li>
@@ -163,3 +163,5 @@ export default () => (
 		</aside>
 	</styles.Footer>
 )
+
+export default Footer
