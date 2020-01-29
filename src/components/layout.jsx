@@ -49,7 +49,7 @@ const Layout = ({ children }) => (
 				}
 			}
 		`}
-		render={data => (
+		render={() => (
 			<>
 				<GlobalStyle />
 				<Header />

@@ -93,7 +93,7 @@ const styles = {
 }
 
 export default () => {
-	const { foreground, background } = useStaticQuery(graphql`
+	const { background } = useStaticQuery(graphql`
 		query {
 			# foreground: file(relativePath: { eq: "bio-foreground.png" }) {
 			# 	childImageSharp {
