@@ -1,3 +1,7 @@
+// NOTE: This shouldn't be necessary, but I can't seem to get the environment
+// vars to work without explicitly running dotenv
+require('dotenv').config()
+
 module.exports = {
 	siteMetadata: {
 		title: `Sebastian Assaf`,
@@ -41,6 +45,12 @@ module.exports = {
 				theme_color: `#4B5F32`,
 				display: `minimal-ui`,
 				icon: `src/images/favicon.svg`,
+			},
+		},
+		{
+			resolve: 'gatsby-plugin-google-tagmanager',
+			options: {
+				id: process.env.GTM_ID,
 			},
 		},
 	],
