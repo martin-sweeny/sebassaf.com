@@ -92,7 +92,7 @@ const styles = {
 	`,
 }
 
-const Biography = () => {
+export default () => {
 	const { background } = useStaticQuery(graphql`
 		query {
 			# foreground: file(relativePath: { eq: "bio-foreground.png" }) {
@@ -123,24 +123,24 @@ const Biography = () => {
 						<br />
 						<br />
 						Please allow me to introduce myself, since you may be wondering:
-						&quot;Who is this Sebastian Assaf guy?&quot;
+						"Who is this Sebastian Assaf guy?”
 					</strong>
 					<p>
-						I&apos;m actually a fairly normal guy, who went through a point
-						where I decided that I needed to get a handle on my business.
+						I'm actually a fairly normal guy, who went through a point where I
+						decided that I needed to get a handle on my business.
 						<br />
 						<br />
-						I won&apos;t get into the details, but I was going through a time
-						where I was involved in my first business opportunity, and
-						struggling... and I still had NO IDEA how to build a successful
-						business and team. One night, I had just finished making another
-						endlessly unsuccessful cold call, and I said &quot;I am going to
-						figure this out for myself, whatever it takes&quot;.
+						I won't get into the details, but I was going through a time where I
+						was involved in my first business opportunity, and struggling... and
+						I still had NO IDEA how to build a successful business and team. One
+						night, I had just finished making another endlessly unsuccessful
+						cold call, and I said "I am going to figure this out for myself,
+						whatever it takes".
 						<br />
 						<br />
-						Well, it wasn&apos;t so easy. I spent the next few years reading a
-						lot of books, going to seminars, and generally trying out a lot of
-						crazy stuff that I was learning. <br />
+						Well, it wasn't so easy. I spent the next few years reading a lot of
+						books, going to seminars, and generally trying out a lot of crazy
+						stuff that I was learning. <br />
 						<br />
 						My epiphany came when I started searching online and learning from
 						people that were successfully building their businesses and living
@@ -148,44 +148,41 @@ const Biography = () => {
 						<br />
 						<br />
 						To make a long story short, I started moving forward by learning
-						from these &quot;mentors&quot;, and taking the things I learned...
-						and started applying them to my life and business.
+						from these "mentors", and taking the things I learned... and started
+						applying them to my life and business.
 						<br />
 						<br />
 						I have now come to believe something that I think is very
 						important...
 						<br />
 						<br />
-						If you don&apos;t know how to market your business effectively, then
-						you&apos;re probably going to approach your business feeling
-						&quot;less than successful&quot;. It&apos;s not an easy thing to
-						explain to someone who doesn&apos;t &quot;get it&quot;, but
-						I&apos;ll bet that you know EXACTLY what I&apos;m talking about.
+						If you don't know how to market your business effectively, then
+						you're probably going to approach your business feeling "less than
+						successful". It's not an easy thing to explain to someone who
+						doesn't "get it", but I'll bet that you know EXACTLY what I'm
+						talking about.
 						<br />
 						<br />
 						On the other hand, if you DO know how to market your business,
-						you&apos;re going to have an inner confidence that other people can
-						sense INSTANTLY.
+						you're going to have an inner confidence that other people can sense
+						INSTANTLY.
 						<br />
 						<br />
-						You might be asking is &quot;Why should I believe what Sebastian
-						says?&quot;.
+						You might be asking is "Why should I believe what Sebastian says?".
 						<br />
 						<br />
-						And my answer to you is that you SHOULDN&apos;T just blindly believe
-						me.
+						And my answer to you is that you SHOULDN'T just blindly believe me.
 						<br />
 						<br />
 						I want you to TRY what you learn.
 						<br />
 						<br />
-						I think you&apos;ll find that I&apos;m not interested in things that
-						don&apos;t work. I like stuff that gets results. And BIG results, at
-						that.
+						I think you'll find that I'm not interested in things that don't
+						work. I like stuff that gets results. And BIG results, at that.
 						<br />
 						<br />
-						Only after you&apos;ve seen that this stuff is REAL... do I want you
-						to &quot;believe&quot; me.
+						Only after you've seen that this stuff is REAL... do I want you to
+						"believe" me.
 						<br />
 						<br />
 						I believe this information is some of the best in the world, and I
@@ -200,7 +197,7 @@ const Biography = () => {
 
 					<footer>
 						<styles.CtaButton href="https://app.acuityscheduling.com/schedule.php?owner=18476238">
-							Let&apos;s Talk
+							Let's Talk
 						</styles.CtaButton>
 					</footer>
 				</styles.Content>
@@ -210,5 +207,3 @@ const Biography = () => {
 		</styles.Biography>
 	)
 }
-
-export default Biography

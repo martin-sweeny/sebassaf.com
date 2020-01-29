@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Image = styled(Img)`
@@ -11,11 +12,9 @@ const Image = styled(Img)`
 	z-index: -1;
 `
 
-const BackgroundImage = data => (
+export default data => (
 	<Image
 		fluid={data.file.childImageSharp.fluid}
 		alt="Gatsby Docs are awesome"
 	/>
 )
-
-export default BackgroundImage

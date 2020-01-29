@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import MediaQuery from 'react-responsive'
+import { Link } from 'gatsby'
 
 import { dark, secondary, accent, white } from '../utils/colours'
 
@@ -142,7 +143,7 @@ const styles = {
 	`,
 }
 
-const Header = () => {
+export default () => {
 	const [menuActive, setMenuActive] = useState(false)
 	return (
 		<styles.Header>
@@ -193,4 +194,3 @@ const Header = () => {
 		</styles.Header>
 	)
 }
-export default Header

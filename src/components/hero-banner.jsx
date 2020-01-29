@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 
 import CTAButton from './cta'
 
-import { dark, secondary } from '../utils/colours'
+import { dark, secondary, primary, white } from '../utils/colours'
 
 const styles = {
 	HeroBanner: styled.section`
@@ -68,7 +68,7 @@ const styles = {
 	`,
 }
 
-const HeroBanner = () => (
+export default () => (
 	<styles.HeroBanner>
 		<StaticQuery
 			query={graphql`
@@ -103,9 +103,7 @@ const HeroBanner = () => (
 		<CTAButton
 			href={'https://app.acuityscheduling.com/schedule.php?owner=18476238'}
 		>
-			Let&apos;s Talk
+			Let's Talk
 		</CTAButton>
 	</styles.HeroBanner>
 )
-
-export default HeroBanner
